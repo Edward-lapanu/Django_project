@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}services{% endblock %}
+
+{% block content %}
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Service Details</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'gym_app:index' %}">Home</a></li>
+          <li class="current">Service Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Service Details Section -->
+  <section id="service-details" class="service-details section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a href="#" class="active">Web Design</a>
+            <a href="#">Software Development</a>
+            <a href="#">Product Management</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Marketing</a>
+          </div>
+
+          <h4>Graphics and design</h4>
+          <p>Our graphics and design services are tailored to meet customers specifications.</p>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
+          <h3>At LeoTech we offer high responsive web development  and design services</h3>
+          <p>
+            We have a team of experts who can takecare your website
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Web dev</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Web design</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Graphic and design</span></li>
+          </ul>
+          <p>
+            LeoTech is specialized in team support
+          </p>
+          <p>
+            Get yourself beautiful customizable resume template
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Service Details Section -->
+
+</main>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+{% block bottom %}
+{% endblock bottom %}
+
+  
