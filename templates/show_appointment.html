@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}show appoitments{% endblock title %}
+{% block content %}
+<table class= "table table-light table-responsive">
+   <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Your phone</th>
+        <th>Date</th>
+        <th>Service</th>
+        <th>Specialist</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+  </thead>
+   <tbody >
+    {% for appointment in appointments %}
+    <tr>
+       <td>{{ appointment.name }}</td>
+       <td>{{ appointment.email }}</td>
+       <td>{{ appointment.phone }}</td>
+       <td>{{ appointment.date }}</td>
+       <td>{{ appointment.service }}</td>
+       <td>{{ appointment.specialist }}</td>
+       <td>{{ appointment.message }}</td>
+      <td>
+        <a href="{% url 'gym_app:delete_appointment' id=appointment.id %}" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+   </tbody>
+</table>
+{% endblock content %}
